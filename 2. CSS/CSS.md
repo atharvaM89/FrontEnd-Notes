@@ -4,7 +4,7 @@
 
 ### Bolier plate of CSS
 
-![Screenshot 2025-07-22 185935.png](Screenshot_2025-07-22_185935.png)
+![Screenshot 2025-07-22 185935.png](../../Images/CSS/Screenshot_2025-07-22_185935.png)
 
 - *  refers to all
 mens it denotes that this property should be applicable to all properties
