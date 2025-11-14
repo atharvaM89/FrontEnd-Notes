@@ -226,7 +226,7 @@ center , left , right
 
 - 2nd Ways
 
-![image.png](image%201.png)
+![image.png](../Images/CSS/image%201.png)
 
 # 7. Display
 
@@ -429,7 +429,7 @@ state or condition like when an element is hovered over, focused, even its posit
 
 ![image.png](../Images/CSS/image%2017.png)
 
-![image.png](../Images/CSS/mage%2018.png)
+![image.png](../Images/CSS/image%2018.png)
 
 ### Selection
 
