@@ -33,7 +33,7 @@ mens it denotes that this property should be applicable to all properties
 
 - External CSS- Low Priority
 
-![image.png](image.png)
+![image.png](../Images/CSS/image.png)
 
 ![Screenshot 2025-07-22 190324.png](../Images/CSS/Screenshot_2025-07-22_190324.png)
 
