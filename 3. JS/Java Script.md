@@ -48,7 +48,7 @@ we can use or can not use it
 - console.warn() - It is used to Print Warning in the console
 - console.error()- It is used to print error in the console
 
-![image.png](image%201.png)
+![image.png](../Images/JS/image%201.png)
 
 - windows.alert() - Used to Pop and Alert
     
@@ -57,7 +57,7 @@ we can use or can not use it
     - we can also Apply alert as alert()
     - This is only one way communication
     
-    ![image.png](image%202.png)
+    ![image.png](../Images/JS/image%202.png)
     
 
 - windows.prompt() -It is Similar to alert but instead of showing message it take the input from user
@@ -69,7 +69,7 @@ we can use or can not use it
                           - we can  also process the input which the input gave us with the help of Variables 
     
 
-![image.png](image%203.png)
+![image.png](../Images/JS/image%203.png)
 
 # C. Data-Types
 
@@ -86,13 +86,13 @@ but values of const cannot be changed after declaration
 - let- Let is Reassignable
 means if we assigned it once, then we can also change it’s value
 
-![image.png](image%204.png)
+![image.png](../Images/JS/image%204.png)
 
-![image.png](image%205.png)
+![image.png](../Images/JS/image%205.png)
 
 ## i) Classification of Data-Types
 
-![download.png](download.png)
+![download.png](../Images/JS/download.png)
 
 ### **1. Primitive-**
 
@@ -143,9 +143,9 @@ var u;
 console.log(u);
 ```
 
-![image.png](image%206.png)
+![image.png](../Images/JS/image%206.png)
 
-![image.png](image%207.png)
+![image.png](../Images/JS/image%207.png)
 
 - **Big num-**
 
@@ -217,7 +217,7 @@ let obj={}
 console.log(obj)
 ```
 
-![image.png](image%208.png)
+![image.png](../Images/JS/image%208.png)
 
 ## ii) Difference Between Reference and Primitive types
 
@@ -1021,7 +1021,7 @@ document.querySelector("button")
 //output
 ```
 
-![image.png](image%209.png)
+![image.png](../Images/JS/image%209.png)
 
 # L. Call- Apply - Bind
 
@@ -1116,7 +1116,7 @@ and send that 10 min task to background
 - and at the end , it join that 10min task form the background
 - For That purpose we have **Async-Await**
 
-![WhatsApp Image 2025-11-19 at 18.53.45_3c5940f7.jpg](WhatsApp_Image_2025-11-19_at_18.53.45_3c5940f7.jpg)
+![WhatsApp Image 2025-11-19 at 18.53.45_3c5940f7.jpg](../Images/JS/WhatsApp_Image_2025-11-19_at_18.53.45_3c5940f7.jpg)
 
 ```jsx
 async function demo(){
