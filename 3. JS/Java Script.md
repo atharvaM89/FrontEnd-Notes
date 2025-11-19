@@ -34,7 +34,7 @@ So this makes a JS programming language
     
     ### How to Link JS in HTML
     
-    ![image.png](../../Images/JS/image.png)
+    ![image.png](../Images/JS/image.png)
     
 - Load JavaScript at the end of the body
 It is Most preferable because it helps to load site faster comparatively to head
