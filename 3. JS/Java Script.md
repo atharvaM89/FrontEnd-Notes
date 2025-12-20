@@ -1200,6 +1200,326 @@ getUserData().then((data) => {
 	User data fetched: {name: 'Atharva', age: 20}
 ```
 
+# tp
+
 # N. Dom Manipulation
 
+- Why we use DOM- When we need to represent the HTML page using object then we use DOM
+- It is **Document Object Model- so we need to create obj of HTML page**
+- So basically, here we represent the overall structure of HTML with the help of object
+- If we want to HTML page **hierarchy** we can show it with the help of DOM by creating it’s object
+
+- Consider we have created a html page which has heading, paragraph, button then we can access these all by using object of document  in JS
+
+**#It is Method of Fetching**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="Main Heading" > Welcome to Course </h1>            //id denotes unique ness    
+    <p class="description"> It is a Java Full stack Batch</p>    // //one class name have mutilple names
+    <button id="btn">Click me </button> 
+
+    <script>
+//Method of fetching
+        const heading=document.getElementById("Main Heading");     // jha pe id lagate hai wha pe sirf elemmnet ka object retunr hota hai
+        console.log(heading.innerText);
+
+        const para=document.getElementsByClassName("description")[0];  //jha pe class name aata hai waha pe collection return hota hai
+        console.log(para.innerText);
+
+         const btun=document.getElementById("btn");  
+        console.log(btun.innerText);
+       
+    </script>
+</body>
+</html>
+```
+
+```jsx
+const abc=document.getElementById("")
+console.log(abc.innerText);
+
+const para=document.getElementsByClassName("");  //jha pe class name aata hai waha pe collection return hota hai
+ console.log(para.innerText);
+ 
+ note :-
+ yaha hum class return krr rha hai and class name multiple bhi ho sakte hai so
+ [0]
+ define get class name("Description") [0]- mltb 1st wala class jiska nam Description hai
+```
+
+#Method of using Selector
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="Main Heading" > Welcome to Course </h1>            
+    <p class="description"> It is a Java Full stack Batch</p>  
+    <p class="description">It is spark 4.0 java full stack batch</p>  
+
+    <div>
+        <h2 id="title">DSA</h2>
+        <p class="content">DSA course</p>
+    </div>
+
+    <ul class="list">
+        <li>Java</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+    </ul>
+
+    <button id="btn">Click me </button> 
+
+    <script>
+
+        const heading=document.getElementById("Main Heading");     // jha pe id lagate hai wha pe sirf elemmnet ka object retunr hota hai
+        console.log(heading.innerText);
+
+        const para=document.getElementsByClassName("description");  //jha pe class name aata hai waha pe collection return hota hai
+        console.log(para.length);
+
+        console.log(para[0].innerHTML);
+        console.log(para[1].innerHTML)
+        
+
+         const btun=document.getElementById("btn");  
+        console.log(btun.innerText);
+        
+        //selct all list itrem using tag name
+        //method of reading list
+        const listitem=document.getElementsByTagName("list");
+        for(let items of listitem){
+            console.log(items.textContent);
+            
+        }
+
+        //querry selector
+        const des=document.querySelector(".description");
+        description.forEach((p, index) =>{
+            console.log(p.innerText);
+            
+        })
+    </script>
+</body>
+</html>
+```
+
+- innerText- Gives you only visible text inside the element (only gives text, ignores tags)
+- innerHTML- GIves you entire HTML content (including Nested tag inside the element)- not just text
+
 # O. Dom Manipulation Mini Project
+
+### 1. Profile Edit
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h2>Edit Profile</h2>
+    <input type="text" id="nameInput" placeholder="Enter new Name" />
+    <input type="text" id="bioInput" placeholder="Enter new bio" />
+    <input type="text" id="imageInput" placeholder="Enter new image URL" />
+
+    <button onclick="updateProfile()">Update Profile</button>
+
+    <div id="profileCard" class="card">
+        <img id="profilePic" src="data:image/jpeg;base64,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" 
+        alt=""
+        width="100"/>
+
+        <h3 id="profileName">Atharva</h3>
+        <p id="ProfileBio">I am a Full stack Developer</p>
+
+    </div>
+
+    <script>
+       function updateProfile(){
+        const name=document.getElementById("nameInput").value;
+        const bio=document.getElementById("bioInput").value;
+        const img=document.getElementById("imageInput").value;
+
+        document.getElementById("profileName").innerText=name;
+        document.getElementById("ProfileBio").innerText=bio;
+        document.getElementById("profilePic").setAttribute("src",img);
+      
+       }
+
+    </script>
+
+    <style>
+        .card{
+            border: 20px solid #ccc;
+            padding: 15px;
+            width: 200px;
+            margin-top: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+    </style>
+</body>
+</html>
+```
+
+![image.png](../Images/JS/im.png)
+
+![image.png](../Images/JS/img1.png)
+
+### 2. Theme Change
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="toggleTheme()">Toggle Theme</button>
+
+    <div id="app" class="lightTheme">
+        <h1>Hello Buddy</h1>
+        <p>This is Dynamic Changing</p>
+    </div>
+
+    <style>
+        .lightTheme{
+            background: white;
+            color: black;
+            padding: 20px;
+        }
+        .darkTheme{
+            background: black;
+            color: white;
+            padding: 20px;
+        }
+
+    </style>
+
+<script>
+    function toggleTheme()
+    {
+        const app= document.getElementById("app");
+        app.classList.toggle("darkTheme");
+    }
+</script>
+
+</body>
+</html>
+```
+
+- In classList- It is a part of CSS (DOM acess)
+- It gives us capabailty that how much we properties in script file or css file 
+or it is applied to page, we get access to all of them
+
+![image.png](../Images/JS/img2.png)
+
+![image.png](../Images/JS/img3git .png)
+
+### 3. Mini Project
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .err{
+            color: red;
+        }
+        .success{color: green;}
+        .preview{margin-top: 20px; padding: 10px; border: 1px solid #ccc;}
+    </style>
+</head>
+<body>
+        
+    <h2>User Registration</h2>
+    <form id="userForm">
+        <label>Name:</label>
+        <input type="text" name="nameInput" id="nameInput">
+        <br/> <br/>
+
+         <label>
+             <input type="checkbox" name="nameInput" id="subscribe">
+             SubScribe to Atharva Content
+         </label>
+       
+        <br/> <br/>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="Preview" class="Preview"></div>
+
+    <script src="dom.js"></script>
+</body>
+</html>
+```
+
+```jsx
+//EventListner- koi bhi button pe kisi bhi text pe app ne event lga diya jo click able hai
+//means jaise hi yuss event pe click hoga  that methodd will start running 
+
+document.addEventListener("DOMContentLoaded", ()=>{
+const form=document.getElementById("userForm");
+const nameInput=document.getElementById("nameInput");
+const Subscriber=document.getElementById("subscribe");
+const preview=document.getElementById("Preview");
+
+form.addEventListener("submit", (e)=>{
+
+        e.preventDefault();
+        //preventDefault -Prevent page Reload na ho
+
+        const name=nameInput.value.trim();
+        const isSubs= Subscriber.ariaChecked;
+
+        //clear
+        preview.innerHTML="";
+        if(name===""){
+            const err= document.createElement("p");
+            err.textContent="Name Cannot be Empty";
+
+            err.classList.add("err");
+            preview.appendChild(err);
+        }
+        else{
+            const welcome=document.createElement("h3");
+            welcome.textContent=`hell0, ${name}`;
+            preview.appendChild(welcome);
+
+            if(isSubs){
+                 const msg=document.createElement("p");
+                 msg.textContent="You are Subscriber of ATharva COntent";
+                 msg.classList.add("success");
+                 preview.appendChild(msg);
+
+            }
+        }
+        form.reset();
+});
+
+})
+
+```
