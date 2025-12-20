@@ -270,16 +270,16 @@ function openModal(product){
 
 ## This is Output in Desktop
 
-![Screenshot 2025-12-13 234123.png](Screenshot_2025-12-13_234123.png)
+![Desktop 1.png](../Screenshots/Desktop%201.png)
 
-![image.png](image.png)
+![Desktop 2.png](../Screenshots/Desktop%202.png)
 
 ## **This is Device Responsive Output**
 
-![Screenshot 2025-12-13 234157.png](Screenshot_2025-12-13_234157.png)
+![Phone 1.png](../Screenshots/Phone%201.png)
 
-![Screenshot 2025-12-13 234207.png](Screenshot_2025-12-13_234207.png)
+![Phone 2.png](../Screenshots/Phone%202.png)
 
-![Screenshot 2025-12-13 234217.png](Screenshot_2025-12-13_234217.png)
+![Phone 3.png](../Screenshots/Phone%203.png)
 
-![image.png](image%201.png)
+![Phone 4.png](../Screenshots/Phone%204.png)
